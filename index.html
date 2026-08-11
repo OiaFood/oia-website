@@ -1,177 +1,845 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Oia Beautiful Food</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Oia Beautiful Food | Premium Mediterranean Dips</title>
+
+  <meta
+    name="description"
+    content="Oia Beautiful Food creates premium Mediterranean dips inspired by the beauty, flavors and spirit of Oia, Santorini."
+  >
+
+  <meta name="theme-color" content="#ffffff">
 
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #fff8ef;
-      color: #2f3a45;
+    :root {
+      --oia-blue: #064a91;
+      --oia-blue-bright: #0871c9;
+      --oia-blue-dark: #052f60;
+      --oia-light-blue: #edf7ff;
+      --oia-pale-blue: #f7fbff;
+      --white: #ffffff;
+      --ink: #15334f;
+      --muted: #64798c;
+      --line: #dbe9f4;
+      --max-width: 1180px;
+      --shadow: 0 22px 60px rgba(5, 74, 145, 0.12);
     }
 
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+      background: var(--white);
+      color: var(--ink);
+      line-height: 1.7;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    /* =========================================
+       HEADER
+    ========================================= */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(14px);
+
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      width: min(calc(100% - 40px), var(--max-width));
+      min-height: 86px;
+      margin: auto;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .nav-logo img {
+      width: 94px;
+      height: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+
+      color: var(--oia-blue-dark);
+
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .nav-links a {
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--oia-blue-bright);
+    }
+
+    .products-link {
+      padding: 11px 22px;
+
+      background: var(--oia-blue);
+      color: white !important;
+
+      border-radius: 999px;
+    }
+
+    .products-link:hover {
+      background: var(--oia-blue-dark);
+    }
+
+    .menu-button {
+      display: none;
+
+      border: 0;
+      background: transparent;
+
+      color: var(--oia-blue);
+
+      font-size: 29px;
+      cursor: pointer;
+    }
+
+
+    /* =========================================
+       HERO
+    ========================================= */
+
     .hero {
-      min-height: 100vh;
-      background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.35)), url("oia-hero.png");
+      min-height: calc(100vh - 86px);
+
+      background-image:
+        linear-gradient(
+          rgba(3, 43, 85, 0.25),
+          rgba(3, 43, 85, 0.46)
+        ),
+        url("/oia-hero.png");
+
       background-size: cover;
       background-position: center;
+
       display: flex;
       align-items: center;
       justify-content: center;
+
       text-align: center;
-      padding: 40px 20px;
+
+      padding: 70px 20px;
     }
 
     .hero-content {
-      max-width: 780px;
-      color: white;
+      width: min(100%, 820px);
+
+      padding: 46px 42px;
+
+      border-radius: 30px;
+
+      background: rgba(255, 255, 255, 0.91);
+
+      box-shadow: var(--shadow);
+
+      backdrop-filter: blur(8px);
     }
 
-    .brand {
-      font-size: 64px;
-      letter-spacing: 1px;
-      margin: 0 0 14px;
-      font-weight: 700;
+    .hero-logo {
+      width: min(270px, 70vw);
+      margin: 0 auto 28px;
     }
 
     .tagline {
-      font-size: 30px;
-      margin: 0 0 24px;
-      font-weight: 600;
+      margin-bottom: 19px;
+
+      color: var(--oia-blue-dark);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: clamp(30px, 4vw, 45px);
+
+      line-height: 1.15;
+      font-weight: 400;
     }
 
     .description {
-      font-size: 20px;
-      line-height: 1.6;
-      max-width: 620px;
-      margin: 0 auto 32px;
+      max-width: 650px;
+      margin: 0 auto 30px;
+
+      color: #435e75;
+
+      font-size: 19px;
+      line-height: 1.7;
     }
 
-    .coming-soon {
-      display: inline-block;
-      padding: 12px 26px;
-      border-radius: 999px;
-      background: #3f70a4;
-      color: white;
-      font-size: 15px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      font-weight: 700;
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
     }
+
+    .button {
+      min-height: 52px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 0 25px;
+
+      border: 2px solid var(--oia-blue);
+      border-radius: 999px;
+
+      font-size: 14px;
+      font-weight: 800;
+
+      transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      background: var(--oia-blue);
+      color: white;
+    }
+
+    .button-primary:hover {
+      background: var(--oia-blue-dark);
+    }
+
+    .button-secondary {
+      background: white;
+      color: var(--oia-blue);
+    }
+
+
+    /* =========================================
+       GENERAL SECTIONS
+    ========================================= */
 
     .section {
-      padding: 70px 24px;
+      padding: 100px 24px;
+
+      background: white;
+
       text-align: center;
-      background: #fff8ef;
+    }
+
+    .section-alt {
+      background: var(--oia-pale-blue);
+    }
+
+    .section-inner {
+      width: min(100%, 900px);
+      margin: auto;
+    }
+
+    .eyebrow {
+      margin-bottom: 12px;
+
+      color: var(--oia-blue-bright);
+
+      font-size: 11px;
+      font-weight: 900;
+
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
     }
 
     .section h2 {
-      color: #3f70a4;
-      font-size: 36px;
-      margin-bottom: 18px;
+      margin-bottom: 26px;
+
+      color: var(--oia-blue-dark);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: clamp(39px, 5vw, 57px);
+
+      font-weight: 400;
+      line-height: 1.1;
     }
 
     .section p {
-  max-width: 680px;
-  margin: 0 auto 20px;
-  font-size: 19px;
-  line-height: 1.7;
-}
+      max-width: 720px;
+      margin: 0 auto 20px;
+
+      color: #4e6679;
+
+      font-size: 18px;
+      line-height: 1.75;
+    }
+
+    .story-lead {
+      color: var(--oia-blue-dark) !important;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: 23px !important;
+    }
+
+
+    /* =========================================
+       IMAGE SECTION
+    ========================================= */
+
+    .image-section {
+      padding: 25px 24px 100px;
+
+      background: white;
+
+      text-align: center;
+    }
+
+    .image-section img {
+      width: 100%;
+      max-width: 1000px;
+      margin: auto;
+
+      border-radius: 30px;
+
+      box-shadow: var(--shadow);
+    }
+
+
+    /* =========================================
+       PRODUCT PREVIEW
+    ========================================= */
+
+    .product-preview {
+      background:
+        linear-gradient(
+          145deg,
+          var(--oia-blue-dark),
+          var(--oia-blue)
+        );
+
+      color: white;
+    }
+
+    .product-preview .eyebrow {
+      color: #bcdfff;
+    }
+
+    .product-preview h2 {
+      color: white;
+    }
+
+    .product-preview p {
+      color: #dfedfa;
+    }
+
+    .product-preview .button {
+      margin-top: 10px;
+
+      background: white;
+      color: var(--oia-blue);
+
+      border-color: white;
+    }
+
+
+    /* =========================================
+       LAUNCH SECTION
+    ========================================= */
+
+    .launching {
+      background: var(--oia-light-blue);
+    }
+
+
+    /* =========================================
+       FOOTER
+    ========================================= */
 
     .footer {
-      padding: 32px 20px;
+      padding: 42px 20px;
+
       text-align: center;
+
       font-size: 13px;
-      color: #777;
+
+      color: #718395;
+
       background: white;
+
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-logo {
+      width: 100px;
+      margin: 0 auto 20px;
     }
 
     .footer a {
-      color: #3f70a4;
-      text-decoration: none;
-      font-weight: 700;
+      color: var(--oia-blue);
+      font-weight: 800;
     }
 
-.image-section {
-  background: #fff8ef;
-  padding: 20px 24px 70px;
-  text-align: center;
-}
 
-.image-section img {
-  width: 100%;
-  max-width: 980px;
-  border-radius: 28px;
-  box-shadow: 0 18px 50px rgba(0,0,0,0.12);
-}
+    /* =========================================
+       MOBILE
+    ========================================= */
 
-    @media (max-width: 600px) {
-      .brand {
-        font-size: 44px;
+    @media (max-width: 720px) {
+
+      .nav {
+        min-height: 74px;
       }
 
-      .tagline {
-        font-size: 23px;
+      .nav-logo img {
+        width: 76px;
+      }
+
+      .menu-button {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+
+        position: absolute;
+
+        top: 74px;
+        left: 0;
+        right: 0;
+
+        padding: 25px;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        text-align: center;
+
+        background: white;
+
+        border-bottom: 1px solid var(--line);
+
+        box-shadow:
+          0 18px 30px rgba(5, 74, 145, 0.1);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .hero {
+        min-height: calc(100vh - 74px);
+
+        padding: 40px 18px;
+      }
+
+      .hero-content {
+        padding: 38px 24px;
+      }
+
+      .hero-logo {
+        width: min(230px, 72vw);
       }
 
       .description {
-        font-size: 18px;
+        font-size: 17px;
       }
+
+      .section {
+        padding: 75px 22px;
+      }
+
+      .image-section {
+        padding:
+          10px 20px 75px;
+      }
+
     }
+
   </style>
 </head>
 
+
 <body>
-  <main>
-    <section class="hero">
-      <div class="hero-content">
-        <h1 class="brand">Oia Beautiful Food</h1>
-        <p class="tagline">Inspired by Oia. Made to Share.</p>
-        <p class="description">
-          Premium Mediterranean dips crafted to bring beauty, flavor,
-          and a little bit of Santorini to the table.
-        </p>
-        <div class="coming-soon">Coming Soon</div>
+
+  <!-- =======================================
+       HEADER
+  ======================================== -->
+
+  <header class="site-header">
+
+    <nav class="nav">
+
+      <a
+        href="/"
+        class="nav-logo"
+        aria-label="Oia Beautiful Food home"
+      >
+        <img
+          src="/oia-logo.png"
+          alt="Oia Beautiful Food"
+        >
+      </a>
+
+
+      <button
+        class="menu-button"
+        id="menuButton"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+
+
+      <div
+        class="nav-links"
+        id="navLinks"
+      >
+
+        <a href="#story">
+          Our Story
+        </a>
+
+        <a
+          href="/products.html"
+          class="products-link"
+        >
+          Our Products
+        </a>
+
+        <a href="#contact">
+          Contact
+        </a>
+
       </div>
+
+    </nav>
+
+  </header>
+
+
+
+  <main>
+
+
+    <!-- =====================================
+         HERO
+    ====================================== -->
+
+    <section class="hero">
+
+      <div class="hero-content">
+
+        <img
+          src="/oia-logo.png"
+          alt="Oia Beautiful Food"
+          class="hero-logo"
+        >
+
+        <h1 class="tagline">
+          Inspired by Oia. Made to Share.
+        </h1>
+
+        <p class="description">
+          Premium Mediterranean dips crafted to bring beauty,
+          flavor and a little bit of Santorini to the table.
+        </p>
+
+        <div class="hero-actions">
+
+          <a
+            href="/products.html"
+            class="button button-primary"
+          >
+            Discover Our Dips
+          </a>
+
+          <a
+            href="#story"
+            class="button button-secondary"
+          >
+            Our Story
+          </a>
+
+        </div>
+
+      </div>
+
     </section>
 
-    <section class="section">
-  <h2>Our Story</h2>
 
-  <p>Ten years ago, my wife and I spent our honeymoon in Oia, on the island of Santorini, Greece.</p>
 
-  <p>One afternoon, we sat down for a simple meal overlooking the sea. I remember taking the first bite and thinking, “I've never tasted anything like this before. Why doesn't food like this exist where I live?”</p>
+    <!-- =====================================
+         OUR STORY
+    ====================================== -->
 
-  <p>But looking back, it wasn't just the food. It was the whitewashed streets, the blue domes, the warm afternoon air, the tablecloth, the serving dishes, and the feeling of being newly married with our whole lives ahead of us.</p>
+    <section
+      class="section"
+      id="story"
+    >
 
-  <p>A decade later, I still can't get that experience out of my mind.</p>
+      <div class="section-inner">
 
-  <p>Oia was born from the desire to capture a little of what made that afternoon so unforgettable.</p>
+        <p class="eyebrow">
+          Our Story
+        </p>
 
-  <p>So much of the food we eat today is made to be eaten alone, in a hurry, or on the go. I wanted to create something different: food that's meant to be placed in the center of the table, shared with the people you love most, and worthy of life's best moments.</p>
-</section>
+        <h2>
+          A taste inspired by an unforgettable place.
+        </h2>
 
-<section class="image-section">
-  <img src="oia-food.png" alt="Oia Mediterranean dips served in a Santorini-inspired setting">
-</section>
+        <p class="story-lead">
+          Ten years ago, my wife and I spent our honeymoon in Oia,
+          on the island of Santorini, Greece.
+        </p>
 
-    <section class="section">
-      <h2>Launching Soon</h2>
-      <p>
-        We’re preparing to launch premium Greek-inspired dips in the Seattle area.
-        More details coming soon.
-      </p>
+        <p>
+          One afternoon, we sat down for a simple meal overlooking
+          the sea. I remember taking the first bite and thinking,
+          “I've never tasted anything like this before. Why doesn't
+          food like this exist where I live?”
+        </p>
+
+        <p>
+          But looking back, it wasn't just the food. It was the
+          whitewashed streets, the blue domes, the warm afternoon
+          air, the tablecloth, the serving dishes, and the feeling
+          of being newly married with our whole lives ahead of us.
+        </p>
+
+        <p>
+          A decade later, I still can't get that experience out
+          of my mind.
+        </p>
+
+        <p>
+          Oia was born from the desire to capture a little of what
+          made that afternoon so unforgettable.
+        </p>
+
+        <p>
+          So much of the food we eat today is made to be eaten
+          alone, in a hurry, or on the go. I wanted to create
+          something different: food that's meant to be placed in
+          the center of the table, shared with the people you love
+          most, and worthy of life's best moments.
+        </p>
+
+      </div>
+
     </section>
+
+
+
+    <!-- =====================================
+         EXISTING FOOD IMAGE
+    ====================================== -->
+
+    <section class="image-section">
+
+      <img
+        src="/oia-food.png"
+        alt="Oia Mediterranean dips served in a Santorini-inspired setting"
+      >
+
+    </section>
+
+
+
+    <!-- =====================================
+         PRODUCT PAGE CTA
+    ====================================== -->
+
+    <section class="section product-preview">
+
+      <div class="section-inner">
+
+        <p class="eyebrow">
+          Oia Beautiful Food
+        </p>
+
+        <h2>
+          Meet the dips.
+        </h2>
+
+        <p>
+          Discover our Creamy Feta Dip, Roasted Red Pepper
+          Creamy Feta Dip and Kalamata Olive Creamy Feta Dip,
+          along with serving ideas inspired by the Mediterranean table.
+        </p>
+
+        <a
+          href="/products.html"
+          class="button"
+        >
+          Explore Our Products
+        </a>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         LAUNCH
+    ====================================== -->
+
+    <section class="section launching">
+
+      <div class="section-inner">
+
+        <p class="eyebrow">
+          Coming Soon
+        </p>
+
+        <h2>
+          Launching in the Seattle area.
+        </h2>
+
+        <p>
+          We’re preparing to launch premium Greek-inspired dips
+          in the Seattle area. More details coming soon.
+        </p>
+
+      </div>
+
+    </section>
+
+
   </main>
 
-  <footer class="footer">
+
+
+  <!-- =======================================
+       FOOTER
+  ======================================== -->
+
+  <footer
+    class="footer"
+    id="contact"
+  >
+
+    <img
+      src="/oia-logo.png"
+      alt="Oia Beautiful Food"
+      class="footer-logo"
+    >
+
     For inquiries, contact
-    <a href="mailto:nickschroeder53@gmail.com">nickschroeder53@gmail.com</a>
+
+    <a href="mailto:nickschroeder53@gmail.com">
+      nickschroeder53@gmail.com
+    </a>
+
     <br><br>
+
     © 2026 Oia Beautiful Food
+
   </footer>
+
+
+
+  <script>
+
+    const menuButton =
+      document.getElementById("menuButton");
+
+    const navLinks =
+      document.getElementById("navLinks");
+
+
+    menuButton.addEventListener(
+      "click",
+      function () {
+
+        const open =
+          navLinks.classList.toggle("open");
+
+        menuButton.setAttribute(
+          "aria-expanded",
+          String(open)
+        );
+
+        menuButton.textContent =
+          open ? "×" : "☰";
+
+      }
+    );
+
+
+    navLinks
+      .querySelectorAll("a")
+      .forEach(
+        function (link) {
+
+          link.addEventListener(
+            "click",
+            function () {
+
+              navLinks.classList.remove("open");
+
+              menuButton.setAttribute(
+                "aria-expanded",
+                "false"
+              );
+
+              menuButton.textContent =
+                "☰";
+
+            }
+          );
+
+        }
+      );
+
+  </script>
+
 </body>
 </html>

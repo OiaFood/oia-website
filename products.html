@@ -1,0 +1,1580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Our Products | Oia Beautiful Food</title>
+
+  <meta
+    name="description"
+    content="Explore Oia Beautiful Food's premium Mediterranean creamy feta dips and serving inspiration."
+  >
+
+  <meta name="theme-color" content="#ffffff">
+
+
+  <style>
+
+    :root {
+      --oia-blue: #064a91;
+      --oia-blue-bright: #0871c9;
+      --oia-blue-dark: #052f60;
+      --oia-light-blue: #edf7ff;
+      --oia-pale-blue: #f7fbff;
+      --white: #ffffff;
+
+      --ink: #15334f;
+      --muted: #60768a;
+      --line: #dce9f3;
+
+      --max-width: 1180px;
+      --radius: 28px;
+
+      --shadow:
+        0 22px 60px rgba(5, 74, 145, 0.13);
+    }
+
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+      background: white;
+      color: var(--ink);
+
+      line-height: 1.7;
+    }
+
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+
+    /* =========================================
+       HEADER
+    ========================================= */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      background:
+        rgba(255, 255, 255, 0.96);
+
+      backdrop-filter:
+        blur(14px);
+
+      border-bottom:
+        1px solid var(--line);
+    }
+
+
+    .nav {
+      width:
+        min(
+          calc(100% - 40px),
+          var(--max-width)
+        );
+
+      min-height:
+        86px;
+
+      margin:
+        auto;
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        space-between;
+
+      gap:
+        30px;
+    }
+
+
+    .nav-logo img {
+      width:
+        94px;
+
+      height:
+        auto;
+    }
+
+
+    .nav-links {
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      gap:
+        30px;
+
+      color:
+        var(--oia-blue-dark);
+
+      font-size:
+        14px;
+
+      font-weight:
+        700;
+    }
+
+
+    .nav-links a:hover {
+      color:
+        var(--oia-blue-bright);
+    }
+
+
+    .active-link {
+      padding:
+        11px 22px;
+
+      border-radius:
+        999px;
+
+      background:
+        var(--oia-blue);
+
+      color:
+        white !important;
+    }
+
+
+    .menu-button {
+      display:
+        none;
+
+      border:
+        0;
+
+      background:
+        transparent;
+
+      color:
+        var(--oia-blue);
+
+      font-size:
+        29px;
+
+      cursor:
+        pointer;
+    }
+
+
+
+    /* =========================================
+       PRODUCT HERO
+    ========================================= */
+
+    .product-hero {
+      padding:
+        105px 24px 90px;
+
+      text-align:
+        center;
+
+      background:
+
+        radial-gradient(
+          circle at 50% -20%,
+          #dcedfa,
+          transparent 48%
+        ),
+
+        linear-gradient(
+          180deg,
+          white,
+          var(--oia-pale-blue)
+        );
+    }
+
+
+    .product-hero-logo {
+      width:
+        min(
+          190px,
+          55vw
+        );
+
+      margin:
+        0 auto 28px;
+    }
+
+
+    .eyebrow {
+      margin-bottom:
+        12px;
+
+      color:
+        var(--oia-blue-bright);
+
+      font-size:
+        11px;
+
+      font-weight:
+        900;
+
+      text-transform:
+        uppercase;
+
+      letter-spacing:
+        0.22em;
+    }
+
+
+    .product-hero h1 {
+      max-width:
+        900px;
+
+      margin:
+        auto;
+
+      color:
+        var(--oia-blue-dark);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:
+        clamp(
+          46px,
+          6vw,
+          76px
+        );
+
+      font-weight:
+        400;
+
+      line-height:
+        1.03;
+
+      letter-spacing:
+        -0.03em;
+    }
+
+
+    .product-hero-copy {
+      max-width:
+        670px;
+
+      margin:
+        26px auto 0;
+
+      color:
+        var(--muted);
+
+      font-size:
+        19px;
+    }
+
+
+
+    /* =========================================
+       PRODUCT SECTION
+    ========================================= */
+
+    .products {
+      padding:
+        30px 24px 110px;
+    }
+
+
+    .products-inner {
+      width:
+        min(
+          100%,
+          var(--max-width)
+        );
+
+      margin:
+        auto;
+    }
+
+
+    .product {
+      display:
+        grid;
+
+      grid-template-columns:
+        1fr
+        1fr;
+
+      align-items:
+        center;
+
+      gap:
+        75px;
+
+      padding:
+        90px 0;
+
+      border-bottom:
+        1px solid var(--line);
+    }
+
+
+    .product:last-child {
+      border-bottom:
+        0;
+    }
+
+
+    .product:nth-child(even) .visual {
+      order:
+        2;
+    }
+
+
+
+    /* =========================================
+       PRODUCT IMAGES
+    ========================================= */
+
+    .visual {
+      position:
+        relative;
+
+      min-height:
+        520px;
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      padding:
+        38px;
+
+      overflow:
+        hidden;
+
+      border-radius:
+        var(--radius);
+
+      background:
+
+        radial-gradient(
+          circle at 50% 30%,
+          #ffffff 0%,
+          #f4faff 50%,
+          #e3f1fb 100%
+        );
+
+      box-shadow:
+        inset
+        0 0 0 1px
+        rgba(5, 74, 145, 0.08);
+    }
+
+
+    .visual::before {
+      content:
+        "";
+
+      position:
+        absolute;
+
+      width:
+        290px;
+
+      height:
+        290px;
+
+      border:
+        55px solid
+        rgba(6, 74, 145, 0.035);
+
+      border-radius:
+        50%;
+    }
+
+
+    .image-group {
+      position:
+        relative;
+
+      z-index:
+        2;
+
+      width:
+        100%;
+
+      min-height:
+        420px;
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
+    }
+
+
+    .dip-image {
+      position:
+        relative;
+
+      z-index:
+        1;
+
+      width:
+        78%;
+
+      max-height:
+        390px;
+
+      object-fit:
+        contain;
+
+      filter:
+        drop-shadow(
+          0 25px 26px
+          rgba(20, 45, 70, 0.14)
+        );
+    }
+
+
+    .package-image {
+      position:
+        absolute;
+
+      z-index:
+        2;
+
+      right:
+        0;
+
+      bottom:
+        0;
+
+      width:
+        39%;
+
+      max-height:
+        260px;
+
+      object-fit:
+        contain;
+
+      filter:
+        drop-shadow(
+          0 19px 20px
+          rgba(20, 45, 70, 0.24)
+        );
+    }
+
+
+    .missing-image {
+      display:
+        none;
+    }
+
+
+
+    /* =========================================
+       PRODUCT TEXT
+    ========================================= */
+
+    .product-tag {
+      display:
+        inline-block;
+
+      margin-bottom:
+        15px;
+
+      padding:
+        7px 13px;
+
+      border-radius:
+        999px;
+
+      background:
+        var(--oia-light-blue);
+
+      color:
+        var(--oia-blue);
+
+      font-size:
+        10px;
+
+      font-weight:
+        900;
+
+      text-transform:
+        uppercase;
+
+      letter-spacing:
+        0.14em;
+    }
+
+
+    .product h2 {
+      margin-bottom:
+        20px;
+
+      color:
+        var(--oia-blue-dark);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:
+        clamp(
+          38px,
+          4.6vw,
+          54px
+        );
+
+      font-weight:
+        400;
+
+      line-height:
+        1.08;
+    }
+
+
+    .romance-copy {
+      color:
+        #50697c;
+
+      font-size:
+        18px;
+    }
+
+
+    .detail-heading {
+      margin-top:
+        26px;
+
+      margin-bottom:
+        8px;
+
+      color:
+        var(--oia-blue);
+
+      font-size:
+        11px;
+
+      font-weight:
+        900;
+
+      text-transform:
+        uppercase;
+
+      letter-spacing:
+        0.15em;
+    }
+
+
+    .ingredients {
+      color:
+        #5c7183;
+
+      font-size:
+        14px;
+    }
+
+
+    .contains {
+      margin-top:
+        7px;
+
+      color:
+        var(--ink);
+
+      font-size:
+        13px;
+
+      font-weight:
+        800;
+    }
+
+
+    .net-weight {
+      margin-top:
+        3px;
+
+      color:
+        var(--muted);
+
+      font-size:
+        13px;
+    }
+
+
+
+    /* =========================================
+       SERVING + RECIPE CARD
+    ========================================= */
+
+    .serving-card {
+      margin-top:
+        27px;
+
+      padding:
+        23px;
+
+      border-left:
+        4px solid var(--oia-blue);
+
+      border-radius:
+        0 18px 18px 0;
+
+      background:
+        var(--oia-pale-blue);
+    }
+
+
+    .serving-card h3 {
+      margin-bottom:
+        8px;
+
+      color:
+        var(--oia-blue-dark);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:
+        22px;
+
+      font-weight:
+        400;
+    }
+
+
+    .serving-card p {
+      color:
+        #5c7183;
+
+      font-size:
+        15px;
+    }
+
+
+    .recipe {
+      margin-top:
+        18px;
+
+      padding-top:
+        18px;
+
+      border-top:
+        1px solid var(--line);
+    }
+
+
+    .recipe strong {
+      display:
+        block;
+
+      margin-bottom:
+        4px;
+
+      color:
+        var(--oia-blue);
+
+      font-size:
+        13px;
+    }
+
+
+
+    /* =========================================
+       CLOSING CTA
+    ========================================= */
+
+    .closing {
+      padding:
+        90px 24px;
+
+      text-align:
+        center;
+
+      color:
+        white;
+
+      background:
+
+        linear-gradient(
+          145deg,
+          var(--oia-blue-dark),
+          var(--oia-blue)
+        );
+    }
+
+
+    .closing-inner {
+      width:
+        min(
+          100%,
+          700px
+        );
+
+      margin:
+        auto;
+    }
+
+
+    .closing h2 {
+      margin-bottom:
+        17px;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:
+        clamp(
+          38px,
+          5vw,
+          55px
+        );
+
+      font-weight:
+        400;
+
+      line-height:
+        1.1;
+    }
+
+
+    .closing p {
+      margin-bottom:
+        28px;
+
+      color:
+        #dcecf9;
+
+      font-size:
+        18px;
+    }
+
+
+    .home-button {
+      display:
+        inline-flex;
+
+      min-height:
+        52px;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      padding:
+        0 26px;
+
+      border-radius:
+        999px;
+
+      background:
+        white;
+
+      color:
+        var(--oia-blue);
+
+      font-size:
+        14px;
+
+      font-weight:
+        800;
+    }
+
+
+
+    /* =========================================
+       FOOTER
+    ========================================= */
+
+    footer {
+      padding:
+        42px 20px;
+
+      text-align:
+        center;
+
+      background:
+        white;
+
+      color:
+        #718395;
+
+      font-size:
+        13px;
+    }
+
+
+    .footer-logo {
+      width:
+        100px;
+
+      margin:
+        0 auto 20px;
+    }
+
+
+    footer a {
+      color:
+        var(--oia-blue);
+
+      font-weight:
+        800;
+    }
+
+
+
+    /* =========================================
+       MOBILE
+    ========================================= */
+
+    @media (max-width: 800px) {
+
+      .nav {
+        min-height:
+          74px;
+      }
+
+
+      .nav-logo img {
+        width:
+          76px;
+      }
+
+
+      .menu-button {
+        display:
+          block;
+      }
+
+
+      .nav-links {
+        display:
+          none;
+
+        position:
+          absolute;
+
+        top:
+          74px;
+
+        left:
+          0;
+
+        right:
+          0;
+
+        padding:
+          25px;
+
+        flex-direction:
+          column;
+
+        text-align:
+          center;
+
+        background:
+          white;
+
+        border-bottom:
+          1px solid var(--line);
+
+        box-shadow:
+          0 18px 30px
+          rgba(5, 74, 145, 0.1);
+      }
+
+
+      .nav-links.open {
+        display:
+          flex;
+      }
+
+
+      .product {
+        grid-template-columns:
+          1fr;
+
+        gap:
+          42px;
+
+        padding:
+          65px 0;
+      }
+
+
+      .product:nth-child(even) .visual {
+        order:
+          0;
+      }
+
+
+      .visual {
+        min-height:
+          410px;
+      }
+
+    }
+
+
+    @media (max-width: 520px) {
+
+      .product-hero {
+        padding:
+          75px 20px 60px;
+      }
+
+
+      .products {
+        padding:
+          10px 20px 80px;
+      }
+
+
+      .visual {
+        min-height:
+          350px;
+
+        padding:
+          22px;
+      }
+
+
+      .image-group {
+        min-height:
+          310px;
+      }
+
+
+      .dip-image {
+        width:
+          82%;
+
+        max-height:
+          290px;
+      }
+
+
+      .package-image {
+        width:
+          42%;
+
+        max-height:
+          205px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =======================================
+       HEADER
+  ======================================== -->
+
+  <header class="site-header">
+
+    <nav class="nav">
+
+      <a
+        href="/"
+        class="nav-logo"
+        aria-label="Oia Beautiful Food home"
+      >
+
+        <img
+          src="/oia-logo.png"
+          alt="Oia Beautiful Food"
+        >
+
+      </a>
+
+
+      <button
+        class="menu-button"
+        id="menuButton"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+
+
+      <div
+        class="nav-links"
+        id="navLinks"
+      >
+
+        <a href="/">
+          Home
+        </a>
+
+        <a
+          href="/products.html"
+          class="active-link"
+        >
+          Our Products
+        </a>
+
+        <a href="/#story">
+          Our Story
+        </a>
+
+        <a href="/#contact">
+          Contact
+        </a>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+
+  <main>
+
+
+    <!-- =====================================
+         PAGE HERO
+    ====================================== -->
+
+    <section class="product-hero">
+
+      <img
+        src="/oia-logo.png"
+        alt="Oia Beautiful Food"
+        class="product-hero-logo"
+      >
+
+      <p class="eyebrow">
+        Our Products
+      </p>
+
+      <h1>
+        Made for the center of the table.
+      </h1>
+
+      <p class="product-hero-copy">
+        Three creamy Mediterranean dips inspired by the flavors
+        and spirit of Greece — made for sharing, gathering and
+        turning everyday moments into something a little more beautiful.
+      </p>
+
+    </section>
+
+
+
+    <!-- =====================================
+         PRODUCTS
+    ====================================== -->
+
+    <section class="products">
+
+      <div class="products-inner">
+
+
+        <!-- =================================
+             CREAMY FETA DIP
+        ================================== -->
+
+        <article class="product">
+
+
+          <div class="visual">
+
+            <div class="image-group">
+
+              <img
+                src="/creamy-feta-dip.png"
+                alt="Oia Beautiful Food Creamy Feta Dip"
+                class="dip-image"
+                loading="lazy"
+                onerror="hideMissingImage(this)"
+              >
+
+              <img
+                src="/creamy-feta-package.png"
+                alt="Oia Beautiful Food Creamy Feta Dip packaging"
+                class="package-image"
+                loading="lazy"
+                onerror="hideMissingImage(this)"
+              >
+
+            </div>
+
+          </div>
+
+
+
+          <div class="product-copy">
+
+            <span class="product-tag">
+              The Original
+            </span>
+
+            <h2>
+              Creamy Feta Dip
+            </h2>
+
+            <p class="romance-copy">
+              Rich, tangy feta meets creamy Greek yogurt,
+              roasted red pepper, lemon, garlic and Mediterranean
+              herbs in a smooth, savory dip made for gathering
+              around the table.
+            </p>
+
+
+            <p class="detail-heading">
+              Ingredients
+            </p>
+
+            <p class="ingredients">
+              Sheep's Milk Feta Cheese, Greek Yogurt,
+              Cream Cheese, Roasted Red Pepper, Olive Oil,
+              Lemon Juice, Garlic, Oregano,
+              Crushed Red Pepper.
+            </p>
+
+            <p class="contains">
+              Contains: Milk
+            </p>
+
+            <p class="net-weight">
+              Net Wt. 10 oz (283 g)
+            </p>
+
+
+            <div class="serving-card">
+
+              <h3>
+                Serving Inspiration
+              </h3>
+
+              <p>
+                Serve with warm pita, crisp vegetables or crackers;
+                spread onto sandwiches and wraps; or place it at
+                the center of a Mediterranean grazing board.
+              </p>
+
+
+              <div class="recipe">
+
+                <strong>
+                  EASY IDEA: SANTORINI MEZZE BOARD
+                </strong>
+
+                <p>
+                  Spoon the dip into a shallow serving bowl and
+                  surround it with warm pita, cucumbers, tomatoes,
+                  olives and your favorite Mediterranean accompaniments.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+        </article>
+
+
+
+        <!-- =================================
+             ROASTED RED PEPPER
+        ================================== -->
+
+        <article class="product">
+
+
+          <div class="visual">
+
+            <div class="image-group">
+
+              <img
+                src="/roasted-red-pepper-creamy-feta-dip.png"
+                alt="Oia Beautiful Food Roasted Red Pepper Creamy Feta Dip"
+                class="dip-image"
+                loading="lazy"
+                onerror="hideMissingImage(this)"
+              >
+
+              <img
+                src="/roasted-red-pepper-package.png"
+                alt="Oia Beautiful Food Roasted Red Pepper Creamy Feta Dip packaging"
+                class="package-image"
+                loading="lazy"
+                onerror="hideMissingImage(this)"
+              >
+
+            </div>
+
+          </div>
+
+
+
+          <div class="product-copy">
+
+            <span class="product-tag">
+              Bold & Vibrant
+            </span>
+
+            <h2>
+              Roasted Red Pepper Creamy Feta Dip
+            </h2>
+
+            <p class="romance-copy">
+              Creamy feta and Greek yogurt meet roasted red pepper,
+              garlic, lemon and Mediterranean herbs for a colorful
+              dip with a rich, savory character.
+            </p>
+
+
+            <p class="detail-heading">
+              Ingredients
+            </p>
+
+            <p class="ingredients">
+              Sheep's Milk Feta Cheese, Greek Yogurt,
+              Cream Cheese, Roasted Red Pepper, Garlic,
+              Lemon Juice, Olive Oil, Oregano,
+              Crushed Red Pepper.
+            </p>
+
+            <p class="contains">
+              Contains: Milk
+            </p>
+
+            <p class="net-weight">
+              Net Wt. 10 oz (283 g)
+            </p>
+
+
+            <div class="serving-card">
+
+              <h3>
+                Serving Inspiration
+              </h3>
+
+              <p>
+                Pair with toasted pita or fresh vegetables,
+                spoon alongside grilled foods, spread onto a
+                sandwich or add it to a Mediterranean-style platter.
+              </p>
+
+
+              <div class="recipe">
+
+                <strong>
+                  EASY IDEA: ROASTED VEGETABLE PITA
+                </strong>
+
+                <p>
+                  Spread generously onto warm pita and top with
+                  roasted vegetables and fresh herbs for a simple
+                  Mediterranean-inspired lunch or appetizer.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+        </article>
+
+
+
+        <!-- =================================
+             KALAMATA OLIVE
+        ================================== -->
+
+        <article class="product">
+
+
+          <div class="visual">
+
+            <div class="image-group">
+
+              <img
+                src="/kalamata-olive-creamy-feta-dip.png"
+                alt="Oia Beautiful Food Kalamata Olive Creamy Feta Dip"
+                class="dip-image"
+                loading="lazy"
+                onerror="hideMissingImage(this)"
+              >
+
+              <img
+                src="/kalamata-olive-package.png"
+                alt="Oia Beautiful Food Kalamata Olive Creamy Feta Dip packaging"
+                class="package-image"
+                loading="lazy"
+                onerror="hideMissingImage(this)"
+              >
+
+            </div>
+
+          </div>
+
+
+
+          <div class="product-copy">
+
+            <span class="product-tag">
+              Mediterranean Classic
+            </span>
+
+            <h2>
+              Kalamata Olive Creamy Feta Dip
+            </h2>
+
+            <p class="romance-copy">
+              Savory olives join creamy feta, Greek yogurt,
+              roasted red pepper, lemon, garlic and herbs for
+              a distinctly Mediterranean flavor inspired by
+              the tables of Greece.
+            </p>
+
+
+            <p class="detail-heading">
+              Ingredients
+            </p>
+
+            <p class="ingredients">
+              Sheep's Milk Feta Cheese, Greek Yogurt,
+              Cream Cheese, Roasted Red Pepper, Garlic,
+              Lemon Juice, Olive Oil, Olives, Oregano,
+              Crushed Red Pepper.
+            </p>
+
+            <p class="contains">
+              Contains: Milk
+            </p>
+
+            <p class="net-weight">
+              Net Wt. 10 oz (283 g)
+            </p>
+
+
+            <div class="serving-card">
+
+              <h3>
+                Serving Inspiration
+              </h3>
+
+              <p>
+                Pair with pita and vegetables, add to a mezze
+                board, spread onto crostini or serve alongside
+                your favorite Mediterranean dishes.
+              </p>
+
+
+              <div class="recipe">
+
+                <strong>
+                  EASY IDEA: KALAMATA CROSTINI
+                </strong>
+
+                <p>
+                  Spread onto toasted slices of baguette and
+                  finish with fresh tomato, herbs or a light
+                  drizzle of olive oil for an easy shared appetizer.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         CLOSE
+    ====================================== -->
+
+    <section class="closing">
+
+      <div class="closing-inner">
+
+        <h2>
+          Inspired by Oia. Made to share.
+        </h2>
+
+        <p>
+          Food worthy of the center of the table and the
+          people gathered around it.
+        </p>
+
+        <a
+          href="/"
+          class="home-button"
+        >
+          Return Home
+        </a>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =======================================
+       FOOTER
+  ======================================== -->
+
+  <footer>
+
+    <img
+      src="/oia-logo.png"
+      alt="Oia Beautiful Food"
+      class="footer-logo"
+    >
+
+    For inquiries, contact
+
+    <a href="mailto:nickschroeder53@gmail.com">
+      nickschroeder53@gmail.com
+    </a>
+
+    <br><br>
+
+    © 2026 Oia Beautiful Food
+
+  </footer>
+
+
+
+  <script>
+
+    const menuButton =
+      document.getElementById("menuButton");
+
+    const navLinks =
+      document.getElementById("navLinks");
+
+
+    menuButton.addEventListener(
+      "click",
+      function () {
+
+        const open =
+          navLinks.classList.toggle("open");
+
+        menuButton.setAttribute(
+          "aria-expanded",
+          String(open)
+        );
+
+        menuButton.textContent =
+          open ? "×" : "☰";
+
+      }
+    );
+
+
+    navLinks
+      .querySelectorAll("a")
+      .forEach(
+        function (link) {
+
+          link.addEventListener(
+            "click",
+            function () {
+
+              navLinks.classList.remove("open");
+
+              menuButton.setAttribute(
+                "aria-expanded",
+                "false"
+              );
+
+              menuButton.textContent =
+                "☰";
+
+            }
+          );
+
+        }
+      );
+
+
+    function hideMissingImage(image) {
+      image.style.display = "none";
+    }
+
+  </script>
+
+</body>
+</html>
