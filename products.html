@@ -375,7 +375,7 @@
         relative;
 
       min-height:
-        520px;
+        560px;
 
       display:
         flex;
@@ -387,7 +387,7 @@
         center;
 
       padding:
-        38px;
+        30px;
 
       overflow:
         hidden;
@@ -444,7 +444,7 @@
         100%;
 
       min-height:
-        420px;
+        500px;
 
       display:
         flex;
@@ -457,63 +457,30 @@
     }
 
 
-    .dip-image {
+    .product-image {
       position:
         relative;
 
       z-index:
-        1;
-
-      width:
-        78%;
-
-      max-height:
-        390px;
-
-      object-fit:
-        contain;
-
-      filter:
-        drop-shadow(
-          0 25px 26px
-          rgba(20, 45, 70, 0.14)
-        );
-    }
-
-
-    .package-image {
-      position:
-        absolute;
-
-      z-index:
         2;
 
-      right:
-        0;
-
-      bottom:
-        0;
-
       width:
-        39%;
+        auto;
+
+      max-width:
+        82%;
 
       max-height:
-        260px;
+        520px;
 
       object-fit:
         contain;
 
       filter:
         drop-shadow(
-          0 19px 20px
-          rgba(20, 45, 70, 0.24)
+          0 24px 26px
+          rgba(20, 45, 70, 0.18)
         );
-    }
-
-
-    .missing-image {
-      display:
-        none;
     }
 
 
@@ -965,7 +932,19 @@
 
       .visual {
         min-height:
-          410px;
+          460px;
+      }
+
+
+      .image-group {
+        min-height:
+          400px;
+      }
+
+
+      .product-image {
+        max-height:
+          430px;
       }
 
     }
@@ -987,34 +966,25 @@
 
       .visual {
         min-height:
-          350px;
+          390px;
 
         padding:
-          22px;
+          20px;
       }
 
 
       .image-group {
         min-height:
-          310px;
+          350px;
       }
 
 
-      .dip-image {
-        width:
-          82%;
+      .product-image {
+        max-width:
+          90%;
 
         max-height:
-          290px;
-      }
-
-
-      .package-image {
-        width:
-          42%;
-
-        max-height:
-          205px;
+          360px;
       }
 
     }
@@ -1144,19 +1114,10 @@
             <div class="image-group">
 
               <img
-                src="/creamy-feta-dip.png"
+                src="/oia-original.png"
                 alt="Oia Beautiful Food Creamy Feta Dip"
-                class="dip-image"
+                class="product-image"
                 loading="lazy"
-                onerror="hideMissingImage(this)"
-              >
-
-              <img
-                src="/creamy-feta-package.png"
-                alt="Oia Beautiful Food Creamy Feta Dip packaging"
-                class="package-image"
-                loading="lazy"
-                onerror="hideMissingImage(this)"
               >
 
             </div>
@@ -1251,19 +1212,10 @@
             <div class="image-group">
 
               <img
-                src="/roasted-red-pepper-creamy-feta-dip.png"
+                src="/oia-pepper.png"
                 alt="Oia Beautiful Food Roasted Red Pepper Creamy Feta Dip"
-                class="dip-image"
+                class="product-image"
                 loading="lazy"
-                onerror="hideMissingImage(this)"
-              >
-
-              <img
-                src="/roasted-red-pepper-package.png"
-                alt="Oia Beautiful Food Roasted Red Pepper Creamy Feta Dip packaging"
-                class="package-image"
-                loading="lazy"
-                onerror="hideMissingImage(this)"
               >
 
             </div>
@@ -1357,19 +1309,10 @@
             <div class="image-group">
 
               <img
-                src="/kalamata-olive-creamy-feta-dip.png"
+                src="/oia-olive.png"
                 alt="Oia Beautiful Food Kalamata Olive Creamy Feta Dip"
-                class="dip-image"
+                class="product-image"
                 loading="lazy"
-                onerror="hideMissingImage(this)"
-              >
-
-              <img
-                src="/kalamata-olive-package.png"
-                alt="Oia Beautiful Food Kalamata Olive Creamy Feta Dip packaging"
-                class="package-image"
-                loading="lazy"
-                onerror="hideMissingImage(this)"
               >
 
             </div>
@@ -1568,11 +1511,6 @@
 
         }
       );
-
-
-    function hideMissingImage(image) {
-      image.style.display = "none";
-    }
 
   </script>
 
